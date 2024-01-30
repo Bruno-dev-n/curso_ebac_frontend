@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <img src="./logo.gif" title="logo">
+            <nav >
+                <ul class="menu">
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <h1> Formulario de validaçao</h1>
+        <h2>Para esse formulario funcionar numero do campo - B tem que ser maior do que o campo - A</h2>
+        <form id="form">
+            <input id="campoB" type="number" required placeholder="Digite EX: 98765432122">
+            <input id="campoA" type="number" required placeholder="Digite EX: 4321 "> 
+            <button id="submit" type="submit">Entrar</button>
+        </form>
+        <p id="mensagem"></p>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
