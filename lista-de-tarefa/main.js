@@ -19,9 +19,12 @@ $(document).ready(function() {
         $(novaLI).fadeIn(2000);
         $('#tarefa').val('');
     })
+
     $('ul').on('click','a',function(){
-        $(this).addClass("li-decoraçao");
+        console.log("Elemento clicado!");
+        $(this).addClass("li-decoracao");
     });
+    
 
 
 });
