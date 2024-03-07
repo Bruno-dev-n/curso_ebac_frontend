@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> exercicio_plugins_jquery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        
+        <div class="container">
+            <div id="logo"><h1>Logo</h1></div>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#cadastro">Cadastrar</a></li>
+            </ul>
+        </nav>
+    </div>
+    </header>
+    <section id="inicio">
+        <div class="container-inicio">
+            <h2>Bem-vindo à Escola de Código Criativo</h2>
+            <p>Desvende os segredos do HTML e CSS e transforme sua criatividade em páginas incríveis!</p>
+            
+                <h2>Por que escolher a Escola de Código Criativo?</h2>
+                <p>Nossa missão é inspirar e capacitar você a construir sites e aplicações web com confiança. Aqui, você aprenderá desde os conceitos básicos até técnicas avançadas, tudo de forma prática e envolvente.</p>
+                <h2>Explore o Universo do HTML e CSS</h2>
+                <p>Com a Escola de Código Criativo, você mergulhará nas maravilhas do HTML e CSS. Descubra como estruturar páginas, estilizar elementos e criar layouts responsivos. Seu futuro digital começa aqui!</p>
+            
+        </div>
+            
+    </section>
+    <section id="sobre">
+        <div class="container">
+            <div class="content">
+                <div>
+                    <h2> <span>HTML5</span></h2>
+                    <p><strong>A Evolução do Hipertexto</strong><br>
+                        <p>O **HTML5** é a versão mais recente da linguagem de marcação de hipertexto. Ele trouxe consigo uma série de recursos inovadores que revolucionaram a forma como criamos e interagimos com páginas da web.</p>
+                        <p>Alguns dos principais recursos do HTML5 incluem:</p>
+                            <p><strong>Semântica:</strong> Introdução de novos elementos semânticos, como &lt;header&gt;, &lt;nav&gt;, &lt;article&gt;, &lt;section&gt; e &lt;footer&gt;, que tornam a estrutura do documento mais clara e significativa.</p>
+                            <p><strong>Multimídia:</strong> Suporte nativo para áudio e vídeo, permitindo a incorporação de mídia diretamente nas páginas. </p>
+                            <p><strong>Formulários Aprimorados:</strong> Novos tipos de campos de formulário, validação automática e recursos de entrada de dados.</p>
+                            <p><strong>APIs:</strong> APIs para geolocalização, armazenamento local, arrastar e soltar, entre outros.</p>
+                        <p>Em resumo, o HTML5 é uma ferramenta poderosa para desenvolvedores web, proporcionando mais flexibilidade, acessibilidade e possibilidades criativas.</p></p>
+                    </div>
+            </div>
+            <div class="content">
+                <h2> <span>CSS</span></h2>
+                <P><strong>Estilizando com CSS</strong></P>
+                <p>O **CSS (Cascading Style Sheets)** é a linguagem usada para dar estilo às páginas da web. Ele permite que você controle a aparência dos elementos HTML, tornando-os visualmente atraentes e consistentes.</p>
+                <p>Alguns conceitos importantes do CSS incluem:</p>
+                <p><strong>Seletor:</strong> Define qual elemento HTML será estilizado. Por exemplo, o seletor `p` estiliza todos os parágrafos.</p>
+                <p><strong>Propriedade:</strong> Determina qual aspecto do elemento será alterado. Por exemplo, a propriedade `color` define a cor do texto.</p>
+                <p><strong>Valor:</strong> Especifica o valor da propriedade. Por exemplo, `red` para a cor vermelha.</p>
+                <p><strong>Box Model:</strong> Compreende o espaço ocupado por um elemento, incluindo margens, bordas, preenchimento e conteúdo.</p>
+                <p><strong>Classes e IDs:</strong> Permitem aplicar estilos específicos a elementos individuais ou grupos de elementos.</p>
+                <p>Com o CSS, você pode criar layouts responsivos, animações, efeitos de transição e muito mais. É uma ferramenta essencial para qualquer desenvolvedor web!</p>
+                        
+            </div>
+        </div>
+    </section>
+    <section id="cadastro">
+        <div class="container">
+            <div class="content">
+                <h2><span>Cadastro De Usuario</span></h2>
+            <form>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+        
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+        
+                <label for="telefone">Telefone:</label>
+                <input type="tel" id="telefone" name="telefone" required>
+        
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="123.456.789-00" required>
+        
+                <label for="endereco">Endereço Completo:</label>
+                <textarea id="endereco" name="endereco" rows="4" required></textarea>
+        
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" placeholder="12345-678" required>
+        
+                <button type="submit"> Cadastrar</button>
+            </form>
+        </div>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./jquery.mask.min.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
