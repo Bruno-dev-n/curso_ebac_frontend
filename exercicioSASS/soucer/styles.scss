@@ -1,0 +1,117 @@
+@use'variavel';
+
+@mixin flex-center {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+@mixin sticky-top {
+    position: sticky;
+    top: 0;
+    left: 0;
+}
+
+@mixin container-max-width($max-width) {
+    max-width: $max-width;
+    width: 100%;
+    margin: 0 auto;
+}
+
+@mixin grid-template($columns, $column-gap, $row-gap) {
+    display: grid;
+    grid-template-columns: $columns;
+    column-gap: $column-gap;
+    row-gap: $row-gap;
+    width: 100%;
+}
+
+@mixin responsive-grid($breakpoint, $columns, $column-gap) {
+    @media screen and (max-width: $breakpoint) {
+        @include grid-template($columns, $column-gap, 4%);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:variavel.$font-family;
+}
+
+body {
+    background-color: variavel.$background-color;
+}
+nav{
+    display: block;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    @include container-max-width(1024px);
+    @include responsive-grid(1023px, '80%', 3%);
+}
+
+header {
+    @include sticky-top;
+    
+    background-color: variavel.$header-bg-color;
+    .container{
+        @include flex-center;
+    }
+}
+
+.menu {
+    display: flex;
+    
+
+    li {
+        font-weight: bold;
+        margin-left: 24px;
+
+        a {
+            color: variavel.$white-color;
+            text-decoration: none;
+        }
+    }
+}
+
+section {
+    padding: 56px 0;
+}
+
+.products {
+    @include grid-template(repeat(3, 32.66%), 1%, 4%);
+    
+    @include responsive-grid(1023px, repeat(2, 48.5%), 3%);
+    @include responsive-grid(767px, '100%', 3%);
+}
+
+.product-item {
+    img {
+        width: 100%;
+        border-radius: 16px;
+    }
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 32px;
+    }
+}
+
+.product-button {
+    display: block;
+    background-color: variavel.$product-button-color;
+    color: variavel.$white-color;
+    text-align: center;
+    padding: 8px 0;
+    border-radius: 8px;
+    margin-top: 8px;
+    text-decoration: none;
+
+    &:hover {
+        background-color: variavel.$product-button-hover-color;
+    }
+}
